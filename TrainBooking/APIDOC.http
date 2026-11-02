@@ -1,0 +1,90 @@
+###
+GET http://127.0.0.1:8000/trains/
+Accept: application/json
+
+
+###
+POST http://127.0.0.1:8000/trains/
+Content-Type: application/json
+
+{
+    "train_name":"Train 1",
+    "train_number":126000,
+    "source":"Banglore",
+    "destination":"Thiruvananthapuram",
+    "departure_time":"01:25:00",
+    "arrival_time":"23:15:00",
+    "available_seats":120
+}
+
+
+###
+GET http://127.0.0.1:8000/train/1/
+Accept: application/json
+
+
+###
+PUT http://127.0.0.1:8000/train/3/
+Content-Type: application/json
+
+{
+    "train_name":"Train 3",
+    "train_number":126003,
+    "source":"Banglore",
+    "destination":"Kannur",
+    "departure_time":"01:25:00",
+    "arrival_time":"13:15:00",
+    "available_seats":120
+}
+
+
+###
+DELETE http://127.0.0.1:8000/train/3/
+Accept: application/json
+
+
+###
+GET http://127.0.0.1:8000/passengers/
+Accept: application/json
+
+
+###
+POST http://127.0.0.1:8000/passengers/
+Content-Type: application/json
+
+{
+    "passenger_name":"Kaushik",
+    "age":23,
+    "gender":"Female",
+    "phone":"9876543765",
+    "train_id":1,
+    "journey_date":"2026-12-15",
+    "seat_number":45,
+    "status":"Confirmed"
+}
+
+
+###
+GET http://127.0.0.1:8000/passenger/3/
+Accept: application/json
+
+
+###
+PUT http://127.0.0.1:8000/passenger/3/
+Content-Type: application/json
+
+{
+    "passenger_name":"Kaushik",
+    "age":23,
+    "gender":"Male",
+    "phone":"9876543765",
+    "train_id":1,
+    "journey_date":"2026-12-15",
+    "seat_number":45,
+    "status":"Confirmed"
+}
+
+
+###
+DELETE http://127.0.0.1:8000/passenger/3/
+Accept: application/json
